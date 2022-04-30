@@ -23,6 +23,12 @@ const server = app.listen(port, () => {
     console.log("Server running on port %PORT%".replace("%PORT%",port))
 });
 
+args["debug"] || false
+var debug = args.debug
+args["log"] || true
+var log = args.log
+args["help"]
+
 // test if its working
 app.get("/app/", (req, res, next) => {
     res.json({"message":"The API is working(200)"});
